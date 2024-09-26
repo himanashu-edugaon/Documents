@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneAuthActivity">
+
+    <ImageView
+        android:id="@+id/PhoneAuthBackButton"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:src="@drawable/baseline_arrow_back_24"
+
+        />
+
+    <TextView
+        android:id="@+id/EnterPhoneNumberText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PhoneAuthBackButton"
+        android:layout_marginStart="20dp"
+        android:text="Enter your mobile number to get OTP"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EnterPhoneNumberText"
+        android:layout_margin="20dp"
+        android:hint="Enter Your Phone number"
+        app:prefixText="+91 | ">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/EnterYourNumberButton"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_below="@id/TextInputLayout"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="13dp"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:text="Get OTP"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        app:backgroundTint="#E89F74"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/black" />
+
+    <TextView
+        android:id="@+id/byclicking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EnterYourNumberButton"
+        android:layout_marginStart="20dp"
+        android:text="By clicking. I accept the "
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/termsofservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EnterYourNumberButton"
+        android:layout_toRightOf="@id/byclicking"
+        android:text=" @string/terms_of_service"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/and"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EnterYourNumberButton"
+        android:layout_toRightOf="@id/termsofservice"
+        android:text=" and "
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/ads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EnterYourNumberButton"
+        android:layout_toRightOf="@id/and"
+        android:text="@string/privacy"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/byclicking"
+        android:layout_marginStart="20dp"
+        android:text="@string/policy"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+
+</RelativeLayout>

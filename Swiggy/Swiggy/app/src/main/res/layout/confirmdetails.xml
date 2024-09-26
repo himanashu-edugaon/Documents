@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmDetails">
+
+
+    <TextView
+        android:id="@+id/helpUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help us get to know you"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="25dp"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/detailsNameEdittext"
+        android:layout_below="@id/helpUs"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:hint="Enter Your Name"
+        app:boxStrokeColor="#EF5A00"
+        app:hintTextColor="#EF5A00"
+        android:layout_margin="25dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/detailsEmailEdittext"
+        android:layout_below="@id/detailsNameEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:hint="Enter Your Name"
+        app:boxStrokeColor="#EF5A00"
+        app:hintTextColor="#EF5A00"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25sp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmDetailsButton"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_below="@id/detailsEmailEdittext"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="13dp"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:text="Confirm details"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        app:backgroundTint="#EF5A00"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/black" />
+
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6F000000"
+        >
+
+        <ImageView
+            android:id="@+id/swiggylogo"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:src="@drawable/swiggylogo"
+            android:layout_marginStart="-45dp"
+            android:layout_marginTop="410dp"
+            />
+        <TextView
+            android:id="@+id/swiggytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Swiggy"
+            android:layout_marginStart="28dp"
+            android:textSize="38dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_below="@id/swiggylogo"/>
+
+        <TextView
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/swiggytext"
+            android:text="Food"
+            android:textSize="24dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/Instamart"
+            android:layout_toRightOf="@id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/swiggytext"
+            android:text=" * Instamart "
+            android:textSize="24dp"
+            android:layout_marginTop="6dp"
+            android:textColor="#C6C6C6"
+            />
+        <TextView
+            android:id="@+id/Dineout"
+            android:layout_toRightOf="@id/Instamart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/swiggytext"
+            android:text="* Dineout"
+            android:textSize="24dp"
+            android:layout_marginTop="6dp"
+            android:textColor="#C6C6C6"
+            />
+
+        <View
+            android:id="@+id/viewInFood"
+            android:layout_below="@id/Dineout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CEC6C6C6"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/upto"
+            android:layout_below="@id/viewInFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order from top restaurants"
+            android:textSize="24dp"
+            android:layout_marginTop="6dp"
+            android:textColor="#CEC6C6C6"
+            android:layout_marginStart="30dp"
+            />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/GetStartButton"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:backgroundTint="#FF5722"
+        android:text="Get Start"
+        android:textSize="18dp"
+        app:cornerRadius="10dp"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/upto"
+        />
+    </RelativeLayout>
+</RelativeLayout>

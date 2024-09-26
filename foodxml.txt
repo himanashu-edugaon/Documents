@@ -1,0 +1,275 @@
+package com.example.swiggy
+//
+//
+//import android.annotation.SuppressLint
+//import android.content.ContentValues.TAG
+//import android.content.Intent
+//import android.os.Bundle
+//import android.util.Log
+//import androidx.fragment.app.Fragment
+//import android.view.LayoutInflater
+//import android.view.View
+//import android.view.ViewGroup
+//import android.widget.ImageView
+//import android.widget.TextView
+//import androidx.cardview.widget.CardView
+//import androidx.recyclerview.widget.GridLayoutManager
+//import androidx.recyclerview.widget.LinearLayoutManager
+//import androidx.recyclerview.widget.RecyclerView
+//import com.example.swiggy.Adapter.CoustomAdapterFoodCardView
+//import com.example.swiggy.Adapter.CoustomAdapterItemView
+//import com.google.android.material.search.SearchView
+//import com.google.firebase.auth.FirebaseAuth
+//import com.google.firebase.firestore.FirebaseFirestore
+//import com.google.firebase.firestore.ktx.firestore
+//import com.google.firebase.ktx.Firebase
+//
+//
+//class FoodFragment : Fragment() {
+//    private val db = FirebaseFirestore.getInstance()
+//    private val collectionRef = db.collection("products")
+//
+//    private lateinit var searchViewOnFoodScreen: SearchView
+//
+//    @SuppressLint("MissingInflatedId", "SuspiciousIndentation", "CutPasteId")
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        val view = inflater.inflate(R.layout.fragment_food, container, false)
+//
+//
+//
+//
+//
+//        val locationGetOnFoodFragment =
+//            view.findViewById<TextView>(R.id.set_location_in_seller_location_in_food_fragment)
+//        val userLocation = FirebaseAuth.getInstance().currentUser?.uid
+//        Firebase.firestore.collection("users").document(userLocation!!).get()
+//            .addOnSuccessListener {
+//                val location = it.data?.get("address")
+//                locationGetOnFoodFragment.text = location.toString()
+//            }
+//
+//        val imageProfile = view.findViewById<ImageView>(R.id.app_bar_image_in_food_fragment)
+//        imageProfile.setOnClickListener {
+//            startActivity(Intent(context, MyAccountActivity::class.java))
+//        }
+//
+//        val recyclerItemView =
+//            view.findViewById<RecyclerView>(R.id.recyclerview_in_item_view_food_fragment_id)
+//        recyclerItemView.layoutManager = LinearLayoutManager(context)
+//        val data2 = ArrayList<ProductDetailsViewModel>()
+//        Firebase.firestore.collection("SellersProductDetails").get()
+//            .addOnSuccessListener { it1 ->
+//                val details = it1.toObjects(ProductDetailsViewModel::class.java)
+//
+//                data2.addAll(details)
+//                recyclerItemView.adapter = context?.let { it1 ->
+//                    CoustomAdapterItemView(
+//                        data2,
+//                        it1
+//                    )
+//                }
+//
+//            }
+//
+//
+//        /////////////////////   RECYCLER VIEW CARD VIEW IN FOOD FRAGMENT   /////////////////////////////
+//        val recyclerViews =
+//            view.findViewById<RecyclerView>(R.id.recyclerview_in_category_view_food_fragment_id)
+//        recyclerViews.layoutManager = LinearLayoutManager(context)
+//        val data = java.util.ArrayList<ItemsViewModel>()
+//
+//        Firebase.firestore.collection("Category").get()
+//            .addOnSuccessListener {
+//                val detail = it.toObjects(ItemsViewModel::class.java)
+//                data.addAll(detail)
+//
+//                recyclerViews.layoutManager = GridLayoutManager(context, 6)
+//                recyclerViews.adapter = context?.let { it1 ->
+//                    CoustomAdapterFoodCardView(
+//                        data,
+//                        it1
+//                    )
+//                }
+//
+//            }
+////        data.add(ItemsViewModel(R.drawable.cake_image_in_food_fragment, "Cake "))
+////        data.add(ItemsViewModel(R.drawable.burger_image_in_food_fragment, "Burger "))
+////        data.add(ItemsViewModel(R.drawable.chaumin_image_in_food_fragment, "Chinese "))
+////        data.add(ItemsViewModel(R.drawable.birayani_image_in_food_fragment, "Biryani "))
+////        data.add(ItemsViewModel(R.drawable.dalroti_image_in_food_fragment, "Daal Roti "))
+////        data.add(ItemsViewModel(R.drawable.dhosa_image_in_food_fragment, "Dhosa "))
+////        data.add(ItemsViewModel(R.drawable.pizza_image_food_fragment, "Pizza "))
+////        data.add(ItemsViewModel(R.drawable.chawal_daal_image_in_food_fragment, "North Indian "))
+////        data.add(ItemsViewModel(R.drawable.pureveg_image_in_food_fragment, "Pure Veg "))
+////        data.add(ItemsViewModel(R.drawable.rools_image_in_food_fragment, "Rools "))
+////        data.add(ItemsViewModel(R.drawable.pav_bhaji_in_food_fragment, "Pav Bhaji "))
+////        data.add(ItemsViewModel(R.drawable.shake_in_food_fragment, "Shake "))
+////        val adapter = context?.let { CoustomAdapterFoodCardView(data, it) }
+//////        recyclerview.layoutManager = GridLayoutManager(context, 6)
+////        recyclerview.adapter = adapter
+//
+//        /////////////////////   SLIDER IMAGE IN FOOD FRAGMENT   /////////////////////////////////
+////        val sliderImage = view.findViewById<ImageSlider>(R.id.image_slider_in_food_screen)
+////        val imagelist = ArrayList<SlideModel>()
+////        imagelist.add(SlideModel(R.drawable.dineout_with_faimly_fourty_persent_off_slider_img, ScaleTypes.FIT))
+////        imagelist.add(SlideModel(R.drawable.fifty_persent_off_slider_img, ScaleTypes.FIT))
+////
+////        val imageSlider = view.findViewById<ImageSlider>(R.id.image_slider1)
+////        imageSlider.setImageList(imageList)
+////        imageSlider.setImageList(imageList, ScaleTypes.FIT)
+//
+//        //////////////////////   SET CURRENT USER NAME    ////////////////////////
+//
+//        val setNameOnFoodFragment = view.findViewById<TextView>(R.id.set_name_in_food_id)
+//        Firebase.firestore.collection("users")
+//            .document(FirebaseAuth.getInstance().currentUser!!.uid).get()
+//            .addOnSuccessListener {
+//                setNameOnFoodFragment.text = it.data?.get("name").toString()
+//            }
+//
+//        searchViewOnFoodScreen = view.findViewById(R.id.searchView1)
+//
+//
+//        //  setupSearchView()
+//
+//        return view
+//    }
+//}
+
+
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.swiggy.Adapter.CoustomAdapterFoodCardView
+import com.example.swiggy.Adapter.CoustomAdapterItemView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import java.util.*
+import kotlin.collections.ArrayList
+
+class FoodFragment : Fragment() {
+
+    private  var dataList = ArrayList<ProductDetailsViewModel>()
+   private lateinit var adapter: CoustomAdapterItemView
+    //private lateinit var searchViewOnFoodScreen: SearchView
+        @SuppressLint("SuspiciousIndentation")
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_food, container, false)
+
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Handle clicks on the profile image to navigate to MyAccountActivity
+        val imageProfile = view.findViewById<ImageView>(R.id.app_bar_image_in_food_fragment)
+        imageProfile.setOnClickListener {
+            startActivity(Intent(context, MyAccountActivity::class.java))
+        }
+
+        // Initialize the RecyclerView for items
+        val recyclerItemView = view.findViewById<RecyclerView>(R.id.recyclerview_in_item_view_food_fragment_id)
+        recyclerItemView.layoutManager = LinearLayoutManager(context)
+        val data2 = ArrayList<ProductDetailsViewModel>()
+
+        // Fetch data from Firebase for the RecyclerView
+        Firebase.firestore.collection("SellersProductDetails").get()
+            .addOnSuccessListener { it1 ->
+                val details = it1.toObjects(ProductDetailsViewModel::class.java)
+                data2.addAll(details)
+                recyclerItemView.adapter = context?.let { it1 ->
+                    CoustomAdapterItemView(data2, it1)
+                }
+            }
+
+        // Initialize the RecyclerView for categories
+        val recyclerViews = view.findViewById<RecyclerView>(R.id.recyclerview_in_category_view_food_fragment_id)
+        recyclerViews.layoutManager = GridLayoutManager(context, 6)
+        val data = ArrayList<ItemsViewModel>()
+
+        // Fetch data from Firebase for category RecyclerView
+        Firebase.firestore.collection("Category").get()
+            .addOnSuccessListener {
+                val detail = it.toObjects(ItemsViewModel::class.java)
+                data.addAll(detail)
+                recyclerViews.adapter = context?.let { it1 ->
+                    CoustomAdapterFoodCardView(data, it1)
+                }
+            }
+
+        // Set the user's location
+        val locationGetOnFoodFragment = view.findViewById<TextView>(R.id.set_location_in_seller_location_in_food_fragment)
+        val userLocation = FirebaseAuth.getInstance().currentUser?.uid
+        Firebase.firestore.collection("users").document(userLocation!!).get()
+            .addOnSuccessListener {
+                val location = it.data?.get("address")
+                locationGetOnFoodFragment.text = location.toString()
+            }
+
+        // Set the current user's name
+        val setNameOnFoodFragment = view.findViewById<TextView>(R.id.set_name_in_food_id)
+        Firebase.firestore.collection("users")
+            .document(FirebaseAuth.getInstance().currentUser!!.uid).get()
+            .addOnSuccessListener {
+                setNameOnFoodFragment.text = it.data?.get("name").toString()
+            }
+
+        // Initialize the SearchView and handle query submissions and text changes//
+
+
+          val searchViewOnFoodScreen = view.findViewById<android.widget.SearchView>(R.id.searchView1) as SearchView
+
+            searchViewOnFoodScreen.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+//                    if (!query.isNullOrEmpty()) {
+//                        // Handle the query submission here
+//                        Log.d("SearchView", "Query submitted: $query")
+//                    }
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    // Handle changes in the query text here (e.g., as the user types)
+                    Log.d("SearchView", "Query text changed: $newText")
+                    searchList(newText)
+                    return true
+                }
+            })
+
+
+
+            return view
+}
+
+    private fun searchList(newText: String?) {
+        val searchList = ArrayList<ProductDetailsViewModel>()
+        for (dataClass in dataList) {
+            val productName = dataClass.ProductName?.lowercase(Locale.getDefault())
+            if (productName?.contains(newText?.lowercase(Locale.getDefault()) ?: "") == true) {
+                searchList.add(dataClass)
+            }
+        }
+
+        // Now you can do something with the filtered searchList, such as updating your adapter or performing any other necessary actions.
+        // For example, if you have a custom adapter, you can update its data and notify the RecyclerView of changes.
+        adapter.updateData(searchList)
+    }
+
+}

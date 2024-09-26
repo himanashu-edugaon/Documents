@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Swiggy</string>
+
+    <string name="terms_of_service"><u>terms of service</u></string>
+    <string name="privacy"><u>privacy</u></string>
+    <string name="policy"><u>policy</u></string>
+</resources>

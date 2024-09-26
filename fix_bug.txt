@@ -1,0 +1,7 @@
+    *Fix the Bug*
+
+ 1.Update Kotlin Version:
+ 2.Update Gradle Wrapper Version
+ 3.Ensure Dependency Compatibility
+ 4.Increase minSdkVersion
+ 5.Clean Project Cache
